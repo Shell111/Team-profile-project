@@ -102,11 +102,10 @@ img {
   4px 8px 8px hsl(220deg 10% 50% / 0.2),
   8px 16px 16px hsl(220deg 10% 50% / 0.2),
   16px 32px 32px hsl(220deg 10% 50% / 0.2);
-
 }
 
-.profile-content {
-  padding: 10px;
+.box .content {
+  overflow: hidden;
 }
 
 .content img {
@@ -131,6 +130,10 @@ img {
 
 .content {
   margin-bottom: 20px;
+}
+
+.profile-content {
+  padding: 10px;
 }
 
 .email-link {
@@ -174,6 +177,11 @@ img {
     grid-template-columns: repeat(3, 1fr);
     max-width: 90%;
   }
+
+  .box .content {
+    overflow: hidden;
+  }
+
 }
 
 /* iPad Pro sizing */
@@ -188,10 +196,6 @@ img {
     grid-template-columns: repeat(2, 1fr);
     max-width: 90%;
     padding: 0 0 40px 0;
-  }
-
-  .box .content {
-    overflow: hidden;
   }
 }
 
