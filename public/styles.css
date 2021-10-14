@@ -1,17 +1,13 @@
 * {
   margin: 0 auto;
-  font-family: 'Poppins';
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: 'Karla', sans-serif;
 }
 
 body {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background: rgb(231, 230, 230);
   font-family: 'Karla', sans-serif;
+  color: rgb(11, 11, 11)
 }
 
 .parallax {
@@ -46,7 +42,6 @@ h1 {
   margin: 0 0 10px 0px;
   text-align: left;
   letter-spacing: .08em;
-  color: #272827;
   font-weight: 600;
   padding: 0;
   text-transform: lowercase;
@@ -92,6 +87,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   row-gap: 50px;
+  padding: 0 30px 40px 30px;
 }
 
 .container .box {
@@ -105,7 +101,8 @@ img {
   2px 4px 4px hsl(220deg 10% 50% / 0.2),
   4px 8px 8px hsl(220deg 10% 50% / 0.2),
   8px 16px 16px hsl(220deg 10% 50% / 0.2),
-  16px 32px 32px hsl(220deg 10% 50% / 0.2)
+  16px 32px 32px hsl(220deg 10% 50% / 0.2);
+
 }
 
 .profile-content {
@@ -154,6 +151,21 @@ img {
   color: #FFDB19;
 }
 
+.footer h5 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.footer {
+  margin-top: 90px;
+  padding: 30px 0;
+  border-top: 1px solid rgb(11, 11, 11);
+}
+
+.footer a {
+  color: rgb(11, 11, 11)
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1324px) {
@@ -175,8 +187,14 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 90%;
+    padding: 0 0 40px 0;
+  }
+
+  .box .content {
+    overflow: hidden;
   }
 }
+
 
 /* iPad sizing */
 
@@ -195,12 +213,38 @@ img {
     font-size: 3em;
     margin: 0 0 30px 10px;
   }
+
+  .grid {
+    border-top: none;
+  }
+}
+
+/* Grid flow sizing fix */
+
+@media only screen and (max-width: 650px) {
+  html,body{
+    overflow-x: hidden;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
 }
 
 /* iPhone sizing */
 @media only screen and (max-width: 420px) {
   html,body{
     overflow-x: hidden;
+  }
+
+  .header-sub-copy {
+    margin-right: 10px;
+  }
+
+  .header-body-copy {
+    font-size: .9em;
+    margin: 10px 0;
   }
 
   .container {
