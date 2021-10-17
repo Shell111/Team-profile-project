@@ -134,6 +134,7 @@ img {
 
 .profile-content {
   padding: 10px;
+  text-transform: uppercase;
 }
 
 .email-link {
